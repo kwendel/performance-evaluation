@@ -1,5 +1,5 @@
 ### Install Tiller SA and Role bindings
-kubectl create -f tiller-rbac-config.yaml
+kubectl create -f manifests/tiller-rbac-config.yaml
 
 ### Setup tiller for helm (assumes that helm init was done before)
 helm init --upgrade --service-account tiller
