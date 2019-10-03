@@ -6,24 +6,17 @@
 # These are the default values for the Helm Spark chart
 # https://github.com/helm/charts/tree/master/stable/spark
 
-# TODO: Change docker image to one that also contains BigDL
-
 Spark:
   Path: "/opt/spark"
 
 Master:
-  Name: master
-  Image: "k8s.gcr.io/spark"
-  ImageTag: "1.5.1_v3"
+  Image: "kwendel/qpe"
+  ImageTag: "latest"
   Replicas: 1
-  Component: "spark-master"
   Cpu: "100m"
   Memory: "512Mi"
   ServicePort: 7077
   ContainerPort: 7077
-  # Set Master JVM memory. Default 1g
-  # DaemonMemory: 1g
-  ServiceType: LoadBalancer
 
 WebUi:
   Name: webui
@@ -31,9 +24,8 @@ WebUi:
   ContainerPort: 8080
 
 Worker:
-  Name: worker
-  Image: "k8s.gcr.io/spark"
-  ImageTag: "1.5.1_v3"
+  Image: "kwendel/qpe"
+  ImageTag: "latest"
   Replicas: 3
   Component: "spark-worker"
   Cpu: "100m"
@@ -45,16 +37,15 @@ Worker:
   # ExecutorMemory: 1g
   Autoscaling:
     Enabled: false
-  ReplicasMax: 10
-  CpuTargetPercentage: 50
 
+# Zeppelin is not used right now
 Zeppelin:
   Name: zeppelin
   Image: "apache/zeppelin"
   ImageTag: "0.7.3"
   Replicas: 1
   Component: "zeppelin"
-  Cpu: "100m"
+  Cpu: "10m"
   ServicePort: 8080
   ContainerPort: 8080
   ServiceType: LoadBalancer

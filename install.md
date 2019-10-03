@@ -1,7 +1,9 @@
+## Login to the cluster
+
 ### Install Tiller SA and Role bindings
 kubectl create -f manifests/tiller-rbac-config.yaml
 
-### Setup tiller for helm (assumes that helm init was done before)
+### Setup tiller on the cluster (assumes that helm init was done before)
 helm init --upgrade --service-account tiller
 
 ### Install Spark SA and Role bindings
