@@ -12,6 +12,6 @@
 ## Install spark
 - Deploy a spark master pod and three workers with `./scripts/deploy-spark.sh` (This script still needs to be tested)
 - Deploy a spark master pod with three worker replications at once with `helm install --debug qpe --values qpe/values.yaml --name test --namespace spark`
-  - Deploy individual templates with `helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --name test --namespace spark`
+- Deploy individual templates with `helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --name test --namespace spark`
 
 ## TODO: Submit a job
