@@ -34,7 +34,7 @@ Worker:
   Name: worker
   Image: "kwendel/qpe"
   ImageTag: "latest"
-  Replicas: 3
+  Replicas: 1
   Component: "spark-worker"
   Fullname: "test-worker"
   Cpu: "100m"

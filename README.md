@@ -5,10 +5,13 @@
 - Extract into the root of the project
 - Install istio on the cluster you're connected to with `./scripts/deploy-cluster.yaml`
 
-## How to run
-- Build the docker container: `docker build -t spark-cluster/spark:latest .`
-- Start the cluster with x workers: `docker-compose up --scale workers=x`
-- Submit the BigDL program to the cluster according to the example in `example-submit.sh`
+## Installing helm
+- Install helm with `brew install kubernetes-helm`, or for other setups see [GitHub](https://github.com/helm/helm)
+- Install Tiller (the server component of helm) and the corresponding namespace & serviceaccount on the cluster you're connect to with `./scripts/init-helm.sh`
 
-Spark Master is available at `localhost:8080/`
-Spark Submit dashboard is available at `localhost:4040/`
+## Install spark
+- Deploy a spark master pod and three workers with `./scripts/deploy-spark.sh` (This script still needs to be tested)
+- Deploy a spark master pod with three worker replications at once with `helm install --debug qpe --values qpe/values.yaml --name test --namespace spark`
+  - Deploy individual templates with `helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --name test --namespace spark`
+
+## TODO: Submit a job
