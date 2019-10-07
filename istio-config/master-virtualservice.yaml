@@ -1,0 +1,36 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: spark-master
+spec:
+  hosts:
+  - test-master.spark.svc.cluster.local
+  http:
+  - route:
+    - destination:
+        host: test-master.spark.svc.cluster.local
+        subset: v1
+    # fault:
+    #   abort:
+    #     percentage:
+    #       value: 0.1
+    #     httpStatus: 400
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Sidecar
+metadata:
+  name: master-sidecar
+  namespace: spark
+spec:
+  workloadSelector:
+    labels:
+      name: spark-master
+  ingress:
+  - hosts:
+    - "./*"
+    - "istio-system/*"
+  egress:
+  - hosts:
+    - "./*"
+    - "istio-system/*"
+
