@@ -1,6 +1,0 @@
-dependencies:
-- name: spark
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 1.0.0
-digest: sha256:7534301e1f0aeb37930a011d7708793a8ea11ced2bf21383a6eb0a624f875183
-generated: "2019-10-02T18:57:36.8938772+02:00"

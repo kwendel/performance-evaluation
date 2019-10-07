@@ -1,4 +1,0 @@
-dependencies:
-  - name: spark
-    version: 1.0
-    repository: https://kubernetes-charts.storage.googleapis.com

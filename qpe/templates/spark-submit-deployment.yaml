@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.Submit.Fullname }}
+  labels:
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Submit.Component }}"
+spec:
+  ports:
+    - port: {{ .Values.Submit.ServicePort }}
+      targetPort: {{ .Values.Submit.ContainerPort }}
+  selector:
+    component: "{{ .Release.Name }}-{{ .Values.Submit.Component }}"
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.Submit.Fullname }}
+  labels:
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Submit.Component }}"
+spec:
+  replicas: {{ default 1 .Values.Submit.Replicas }}
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      component: "{{ .Release.Name }}-{{ .Values.Submit.Component }}"
+  template:
+    metadata:
+      labels:
+        heritage: {{ .Release.Service | quote }}
+        release: {{ .Release.Name | quote }}
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+        component: "{{ .Release.Name }}-{{ .Values.Submit.Component }}"
+    spec:
+      containers:
+        - name: {{ .Values.Submit.Fullname }}
+          image: "{{ .Values.Submit.Image }}:{{ .Values.Worker.ImageTag }}"
+          command: ["/bin/sh"]
+          ports:
+            - containerPort: {{ .Values.Worker.ContainerPort }}
+          resources:
+            requests:
+              cpu: "{{ .Values.Submit.Cpu }}"
+              memory: "{{ .Values.Submit.Memory }}"
+          env:
+          - name: SPARK_HOST_IP
+            value: {{ .Values.Master.Fullname }}
