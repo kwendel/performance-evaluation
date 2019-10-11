@@ -1,14 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
 kubectl create -f manifests/spark-rbac-config.yaml
 
-helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --namespace spark --name spark-master | kubectl apply -f -
+mastername="test-master"
+workername="test-worker"
+namespace="spark"
 
-fullname="test-worker"
-for index in 1 2 3
+helm install qpe/master --set Master.Fullname=$mastername --name $mastername --namespace $namespace
+
+for i in {1..3}
 do
-    workername=${fullname}-${index}
-
-    helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --set Worker.Fullname=$workername --namespace spark --name $workername | kubectl apply -f -
+    name=${workername}-${i}
+    helm install qpe/worker --set Worker.Fullname=$name --name $name --namespace $namespace
 
 done
