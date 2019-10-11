@@ -40,10 +40,10 @@ spec:
     spec:
       containers:
         - name: {{ .Values.Submit.Fullname }}
-          image: "{{ .Values.Submit.Image }}:{{ .Values.Worker.ImageTag }}"
+          image: "{{ .Values.Submit.Image }}:{{ .Values.Submit.ImageTag }}"
           command: ["/bin/sh"]
           ports:
-            - containerPort: {{ .Values.Worker.ContainerPort }}
+            - containerPort: {{ .Values.Submit.ContainerPort }}
           resources:
             requests:
               cpu: "{{ .Values.Submit.Cpu }}"
