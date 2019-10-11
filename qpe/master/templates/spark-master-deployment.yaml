@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: {{ .Values.Master.Fullname }}
   labels:
+    app: {{ .Values.Master.Fullname }}
+    version: v1
     heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -10,6 +12,8 @@ metadata:
 spec:
   ports:
     - port: {{ .Values.Master.ServicePort }}
+      protocol: TCP
+      name: tcp-master
       targetPort: {{ .Values.Master.ContainerPort }}
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
@@ -19,6 +23,8 @@ kind: Service
 metadata:
   name: {{ .Values.WebUi.Fullname }}
   labels:
+    app: {{ .Values.WebUi.Fullname }}
+    version: v1
     heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -36,6 +42,8 @@ kind: Deployment
 metadata:
   name: {{ .Values.Master.Fullname }}
   labels:
+    app: {{ .Values.Master.Fullname }}
+    version: v1
     heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -50,6 +58,8 @@ spec:
   template:
     metadata:
       labels:
+        app: {{ .Values.Master.Fullname }}
+        version: v1
         heritage: {{ .Release.Service | quote }}
         release: {{ .Release.Name | quote }}
         chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -61,7 +71,9 @@ spec:
           command: ["/bin/sh","-c"]
           args: ["echo $(hostname -i) {{ .Values.Master.Fullname }} >> /etc/hosts; {{ .Values.Spark.Path }}/bin/spark-class org.apache.spark.deploy.master.Master"]
           ports:
-            - containerPort: {{ .Values.Master.ContainerPort }}
+            - name: tcp-master
+              containerPort: {{ .Values.Master.ContainerPort }}
+              protocol: TCP
             - containerPort: {{ .Values.WebUi.ContainerPort }}
           resources:
             requests:

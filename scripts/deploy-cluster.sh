@@ -15,5 +15,7 @@ echo "CRDs are ready"
 
 helm template istio-1.3.1/install/kubernetes/helm/istio --name istio --namespace istio-system --values=istio-1.3.1/install/kubernetes/helm/istio/values-istio-demo.yaml | kubectl apply -f -
 
+kubectl create namespace spark
+
 # Enable sidecar injection for the spark namespace
 kubectl label namespace spark istio-injection=enabled

@@ -1,5 +1,0 @@
-1. Get the Spark URL to visit by running these commands in the same shell:
-
-  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
-
-  echo http://$SPARK_SERVICE_IP:{{ .Values.WebUi.ServicePort }}

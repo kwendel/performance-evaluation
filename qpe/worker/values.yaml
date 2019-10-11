@@ -11,6 +11,7 @@ Spark:
 
 Master:
   Fullname: "test-master"
+  Namespace: "spark"
   ServicePort: 7077
 
 WebUi:

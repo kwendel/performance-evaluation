@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: {{ .Values.Worker.Fullname }}
   labels:
+    app: {{ .Values.Worker.Fullname }}
+    version: v1
     heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -10,7 +12,10 @@ metadata:
 spec:
   ports:
     - port: {{ .Values.Worker.ServicePort }}
+      protocol: TCP
+      name: tcp-worker
       targetPort: {{ .Values.Worker.ContainerPort }}
+
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Worker.Component }}"
 ---
@@ -19,6 +24,8 @@ kind: Deployment
 metadata:
   name: {{ .Values.Worker.Fullname  }}
   labels:
+    app: {{ .Values.Worker.Fullname }}
+    version: v1
     heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -33,6 +40,8 @@ spec:
   template:
     metadata:
       labels:
+        app: {{ .Values.Worker.Fullname }}
+        version: v1
         heritage: {{ .Release.Service | quote }}
         release: {{ .Release.Name | quote }}
         chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -41,9 +50,11 @@ spec:
       containers:
         - name: {{  .Values.Worker.Fullname  }}
           image: "{{ .Values.Worker.Image }}:{{ .Values.Worker.ImageTag }}"
-          command: ["{{ .Values.Spark.Path }}/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://{{ .Values.Master.Fullname}}:{{ .Values.Master.ServicePort }}"]
+          command: ["{{ .Values.Spark.Path }}/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://{{ .Values.Master.Fullname}}.{{ .Values.Master.Namespace}}.svc.cluster.local:{{ .Values.Master.ServicePort }}"]
           ports:
-            - containerPort: {{ .Values.Worker.ContainerPort }}
+            - name: tcp-worker
+              containerPort: {{ .Values.Worker.ContainerPort }}
+              protocol: TCP
           resources:
             requests:
               cpu: "{{ .Values.Worker.Cpu }}"

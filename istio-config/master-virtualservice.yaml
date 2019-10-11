@@ -2,6 +2,10 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: spark-master
+  namespace: spark
+  labels:
+    app: spark-master
+    version: v1
 spec:
   hosts:
   - test-master.spark.svc.cluster.local
@@ -19,16 +23,18 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: Sidecar
 metadata:
-  name: master-sidecar
+  name: spark-master-sidecar
   namespace: spark
 spec:
   workloadSelector:
     labels:
-      name: spark-master
+      app: spark-master
   ingress:
-  - hosts:
-    - "./*"
-    - "istio-system/*"
+  - port:
+      number: 7077
+      name: tcp-master
+      protocol: TCP
+    defaultEndpoint: "127.0.0.1:7077"
   egress:
   - hosts:
     - "./*"
