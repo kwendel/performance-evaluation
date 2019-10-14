@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.WebUi.Fullname }}
+  name: "{{ .Values.WebUi.Fullname }}-{{ .Values.Master.Fullname }}"
   labels:
     app: {{ .Values.WebUi.Fullname }}
     version: v1
@@ -35,7 +35,7 @@ spec:
       targetPort: {{ .Values.WebUi.ContainerPort }}
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
-  type: {{ .Values.Master.ServiceType }}
+  type: {{ .Values.WebUi.ServiceType }}
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment

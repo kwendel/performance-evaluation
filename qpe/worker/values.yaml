@@ -16,9 +16,10 @@ Master:
 
 WebUi:
   Name: webui
-  Fullname: "test-webui"
+  Fullname: "worker-webui"
   ServicePort: 8080
   ContainerPort: 8080
+  ServiceType: LoadBalancer
 
 Worker:
   Name: worker

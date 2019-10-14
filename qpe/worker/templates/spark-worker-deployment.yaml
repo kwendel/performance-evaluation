@@ -19,6 +19,25 @@ spec:
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Worker.Component }}"
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.WebUi.Fullname }}-{{ .Values.Worker.Fullname }}"
+  labels:
+    app: {{ .Values.WebUi.Fullname }}
+    version: v1
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Worker.Component }}"
+spec:
+  ports:
+    - port: {{ .Values.WebUi.ServicePort }}
+      targetPort: {{ .Values.WebUi.ContainerPort }}
+  selector:
+    component: "{{ .Release.Name }}-{{ .Values.Worker.Component }}"
+  type: {{ .Values.WebUi.ServiceType }}
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
