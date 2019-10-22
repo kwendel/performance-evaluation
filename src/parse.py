@@ -42,7 +42,6 @@ def parse_file(fname, idx):
         'Time per epoch (ms)': diffs,
         'Total time':          total_times
     }
-    print(data)
 
     # Zero index
     idx = range((epoch - 1) * (idx), (epoch - 1) * (idx + 1))
@@ -53,10 +52,10 @@ def parse_file(fname, idx):
 
 if __name__ == '__main__':
     log_dir = "../logs/"
-    experiment = "3epoch"
+    experiment = "test/"
 
     frames = list()
-    for i, f in enumerate(glob(f"{log_dir}{experiment}_*.log")):
+    for i, f in enumerate(glob(f"{log_dir}{experiment}*.log")):
         frame = parse_file(f, i)
         frames.append(frame)
 
