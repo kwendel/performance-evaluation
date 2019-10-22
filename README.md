@@ -1,5 +1,7 @@
 # CS4215 - Quantitative Performance Evaluation for Computing Systems
 
+# Kubernetes
+
 ## Installing istio
 - Download the latest release from istio from github, 1.3.1 as of writing
 - Extract into the root of the project
@@ -14,4 +16,13 @@
 - Deploy a spark master pod with three worker replications at once with `helm install --debug qpe --values qpe/values.yaml --name test --namespace spark`
 - Deploy individual templates with `helm template qpe -x templates/spark-master-deployment.yaml --values qpe/values.yaml --name test --namespace spark`
 
-## TODO: Submit a job
+# Docker
+
+## How to run
+- Build the docker container: `docker build -t spark-cluster/spark:latest .`
+- Start the cluster with x workers: `docker-compose up --scale workers=x`
+- Change the arguments in `scripts/submit-experiment.sh` and execute it.
+- Resulting logs will be saved in `logs/` and can be analyse with `src/parse.py`. This will extract all accuracies, time per epoch, and the cumulative time at each epoch.
+
+
+

@@ -13,11 +13,16 @@ EXECUTOR_MEMORY=1g
 # https://github.com/intel-analytics/BigDL/tree/master/pyspark/bigdl/models/lenet
 PYTHON_MAIN="/opt/src/lenet5.py"
 # Batch size must be divisible by total_cores into integer
-PYTHON_ARGS="--action train --dataPath /opt/data --batchSize 128 --endTriggerType epoch --endTriggerNum 3"
+PYTHON_ARGS="--action train --dataPath /opt/data --batchSize 128 --endTriggerType epoch --endTriggerNum 20"
 
 # Note: docker volumes on Windows require full absolute path..
-EXPERIMENT_NAME="3epoch"
-REPEATS=3
+EXPERIMENT_NAME="name_me"
+REPEATS=10
+
+echo "Starting with options:"
+echo "Py Main: ${PYTHON_MAIN}"
+echo "Args: ${PYTHON_ARGS}"
+echo "Log Name: "${EXPERIMENT_NAME}
 
 for i in $(eval echo "{1..${REPEATS}}"); do
     fname="logs/"${EXPERIMENT_NAME}_${i}".log"
@@ -31,4 +36,6 @@ for i in $(eval echo "{1..${REPEATS}}"); do
            -p 4040:4040 \
            spark-cluster/spark:latest \
            /opt/submit.sh ${PYTHON_MAIN} ${PYTHON_ARGS} > ${fname}
+
+    echo "Finished [${i}/${REPEATS}]"
 done
