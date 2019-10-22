@@ -22,13 +22,15 @@ services:
     image: spark-cluster/spark:latest
     depends_on:
       - spark-master
+      - toxiproxy
+      - toxiproxy-configurer
     volumes:
       - ./src:/opt/src
       - ./data:/opt/data
     networks:
       - spark-network
     environment:
-      - "SPARK_MASTER=spark://spark-master:7077"
+      - "SPARK_MASTER=spark://toxiproxy:7078"
       - "SPARK_WORKER_WEBUI_PORT=8081"
       - "SPARK_WORKER_LOG=/opt/spark/logs/"
       - "SPARK_WORKER_CORES=1"
@@ -36,6 +38,24 @@ services:
       - "SPARK_DRIVER_MEMORY=1G"
       - "SPARK_EXECUTOR_MEMORY=1G"
     command: ["/opt/start-worker.sh"]
+  toxiproxy:
+    image: shopify/toxiproxy
+    ports:
+      - "7078:7078"
+      - "8474:8474"
+    networks:
+      - spark-network
+    volumes:
+    - ./:/config:ro
+    command: -config /config/proxies.json -host toxiproxy
+  toxiproxy-configurer:
+    build: 
+      context: .
+      dockerfile: Dockerfile-toxiproxy-configurer
+    depends_on:
+      - toxiproxy 
+    networks:
+      - spark-network
 networks:
   spark-network:
     name: "spark-cluster-network"

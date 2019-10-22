@@ -1,0 +1,6 @@
+FROM alpine:3.2
+
+RUN apk update
+RUN apk upgrade
+RUN apk add curl bash
+CMD curl -s -XPOST -d '{"type" : "latency", "attributes" : {"latency" : 3000}}' http://toxiproxy:8474/proxies/spark-master/toxics
