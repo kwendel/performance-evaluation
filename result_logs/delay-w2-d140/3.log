@@ -1,0 +1,251 @@
+SUBMITTED
+/opt/src/lenet5.py --action train --dataPath /opt/data --batchSize 120 --endTriggerType epoch --endTriggerNum 20
+2019-10-23 19:08:10 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-10-23 19:08:10 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-10-23 19:08:10 INFO  SparkContext:54 - Submitted application: lenet5
+2019-10-23 19:08:10 INFO  SecurityManager:54 - Changing view acls to: root
+2019-10-23 19:08:11 INFO  SecurityManager:54 - Changing modify acls to: root
+2019-10-23 19:08:11 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-10-23 19:08:11 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-10-23 19:08:11 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2019-10-23 19:08:11 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 44245.
+2019-10-23 19:08:11 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-10-23 19:08:11 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-10-23 19:08:11 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-10-23 19:08:11 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-10-23 19:08:11 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-79dc5ceb-6307-420f-acc5-42d54b999343
+2019-10-23 19:08:11 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-10-23 19:08:11 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-10-23 19:08:11 INFO  log:192 - Logging initialized @1947ms
+2019-10-23 19:08:11 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-10-23 19:08:11 INFO  Server:419 - Started @2013ms
+2019-10-23 19:08:11 INFO  AbstractConnector:278 - Started ServerConnector@dda6580{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-10-23 19:08:11 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@33afc3c3{/jobs,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4ef8ecaf{/jobs/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@24d4e6ab{/jobs/job,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@fb2abcd{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@626b300{/stages,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@544fcd1{/stages/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2df0aecf{/stages/stage,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@268b5908{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@e250dc0{/stages/pool,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@d03c517{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@55294974{/storage,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@291609c0{/storage/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@f7b5a2f{/storage/rdd,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1cc31daa{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@33e95af{/environment,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1a7fd401{/environment/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4f804f43{/executors,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4baa3554{/executors/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3c4e5263{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@58f54637{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@15c2f03d{/static,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3b3a88a{/,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@329c20b2{/api,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1de287a1{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4fd511c2{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-10-23 19:08:11 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://f3f2f9a2fb59:4040
+2019-10-23 19:08:11 INFO  SparkContext:54 - Added JAR file:///opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar at spark://f3f2f9a2fb59:44245/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar with timestamp 1571857691522
+2019-10-23 19:08:11 INFO  SparkContext:54 - Added file file:///opt/big_dl/lib/bigdl-0.9.0-python-api.zip at spark://f3f2f9a2fb59:44245/files/bigdl-0.9.0-python-api.zip with timestamp 1571857691538
+2019-10-23 19:08:11 INFO  Utils:54 - Copying /opt/big_dl/lib/bigdl-0.9.0-python-api.zip to /tmp/spark-d31c60fe-f722-4927-b0ce-c8bc9371fc98/userFiles-30713ec3-2905-4550-b42b-f9aeda26299b/bigdl-0.9.0-python-api.zip
+2019-10-23 19:08:11 INFO  StandaloneAppClient$ClientEndpoint:54 - Connecting to master spark://spark-master:7077...
+2019-10-23 19:08:11 INFO  TransportClientFactory:267 - Successfully created connection to spark-master/172.19.0.2:7077 after 41 ms (0 ms spent in bootstraps)
+2019-10-23 19:08:11 INFO  StandaloneSchedulerBackend:54 - Connected to Spark cluster with app ID app-20191023190811-0032
+2019-10-23 19:08:11 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023190811-0032/0 on worker-20191023153541-172.19.0.8-32881 (172.19.0.8:32881) with 1 core(s)
+2019-10-23 19:08:11 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023190811-0032/0 on hostPort 172.19.0.8:32881 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:08:11 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023190811-0032/1 on worker-20191023153540-172.19.0.3-43023 (172.19.0.3:43023) with 1 core(s)
+2019-10-23 19:08:11 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023190811-0032/1 on hostPort 172.19.0.3:43023 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:08:11 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42615.
+2019-10-23 19:08:11 INFO  NettyBlockTransferService:54 - Server created on f3f2f9a2fb59:42615
+2019-10-23 19:08:11 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-10-23 19:08:11 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023190811-0032/1 is now RUNNING
+2019-10-23 19:08:11 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023190811-0032/0 is now RUNNING
+2019-10-23 19:08:11 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, f3f2f9a2fb59, 42615, None)
+2019-10-23 19:08:11 INFO  BlockManagerMasterEndpoint:54 - Registering block manager f3f2f9a2fb59:42615 with 366.3 MB RAM, BlockManagerId(driver, f3f2f9a2fb59, 42615, None)
+2019-10-23 19:08:11 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, f3f2f9a2fb59, 42615, None)
+2019-10-23 19:08:11 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, f3f2f9a2fb59, 42615, None)
+2019-10-23 19:08:11 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@42cae710{/metrics/json,null,AVAILABLE,@Spark}
+2019-10-23 19:08:13 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.8:36940) with ID 0
+2019-10-23 19:08:13 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.3:48492) with ID 1
+2019-10-23 19:08:13 INFO  StandaloneSchedulerBackend:54 - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 1.0
+2019-10-23 19:08:13 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.8:39483 with 366.3 MB RAM, BlockManagerId(0, 172.19.0.8, 39483, None)
+2019-10-23 19:08:13 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.3:42057 with 366.3 MB RAM, BlockManagerId(1, 172.19.0.3, 42057, None)
+2019-10-23 19:08:13 INFO  Engine$:112 - Auto detect executor number and executor cores number
+2019-10-23 19:08:13 INFO  Engine$:114 - Executor number is 2 and executor cores number is 1
+2019-10-23 19:08:14 INFO  ThreadPool$:95 - Set mkl threads to 1 on thread 19
+2019-10-23 19:08:14 INFO  Engine$:404 - Find existing spark context. Checking the spark conf...
+cls.getname: com.intel.analytics.bigdl.python.api.Sample
+BigDLBasePickler registering: bigdl.util.common  Sample
+cls.getname: com.intel.analytics.bigdl.python.api.EvaluatedResult
+BigDLBasePickler registering: bigdl.util.common  EvaluatedResult
+cls.getname: com.intel.analytics.bigdl.python.api.JTensor
+BigDLBasePickler registering: bigdl.util.common  JTensor
+cls.getname: com.intel.analytics.bigdl.python.api.JActivity
+BigDLBasePickler registering: bigdl.util.common  JActivity
+('Extracting', '/opt/data/train-images-idx3-ubyte.gz')
+('Extracting', '/opt/data/train-labels-idx1-ubyte.gz')
+('Extracting', '/opt/data/t10k-images-idx3-ubyte.gz')
+('Extracting', '/opt/data/t10k-labels-idx1-ubyte.gz')
+creating: createSequential
+creating: createReshape
+creating: createSpatialConvolution
+creating: createTanh
+creating: createSpatialMaxPooling
+creating: createSpatialConvolution
+creating: createTanh
+creating: createSpatialMaxPooling
+creating: createReshape
+creating: createLinear
+creating: createTanh
+creating: createLinear
+creating: createLogSoftMax
+creating: createClassNLLCriterion
+creating: createDefault
+creating: createSGD
+creating: createMaxEpoch
+creating: createDistriOptimizer
+disableCheckSingleton is deprecated. Please use bigdl.check.singleton instead
+creating: createEveryEpoch
+creating: createTop1Accuracy
+creating: createEveryEpoch
+2019-10-23 19:08:15 INFO  DistriOptimizer$:791 - caching training rdd ...
+2019-10-23 19:08:24 ERROR TransportRequestHandler:293 - Error sending result StreamResponse{streamId=/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, byteCount=146830010, body=FileSegmentManagedBuffer{file=/opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, offset=0, length=146830010}} to /172.19.0.3:48498; closing connection
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:145)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:355)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:224)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:382)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:934)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:368)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:639)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+2019-10-23 19:08:26 ERROR TransportRequestHandler:293 - Error sending result StreamResponse{streamId=/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, byteCount=146830010, body=FileSegmentManagedBuffer{file=/opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, offset=0, length=146830010}} to /172.19.0.3:48502; closing connection
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:145)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:355)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:224)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:382)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:934)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:368)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:639)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+2019-10-23 19:08:34 ERROR TaskSetManager:70 - Task 1 in stage 0.0 failed 4 times; aborting job
+Traceback (most recent call last):
+  File "/opt/src/lenet5.py", line 72, in <module>
+    trained_model = optimizer.optimize()
+  File "/opt/big_dl/lib/bigdl-0.9.0-python-api.zip/bigdl/optim/optimizer.py", line 764, in optimize
+  File "/opt/big_dl/lib/bigdl-0.9.0-python-api.zip/bigdl/util/common.py", line 634, in callJavaFunc
+  File "/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o110.optimize.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 0.0 failed 4 times, most recent failure: Lost task 1.3 in stage 0.0 (TID 6, 172.19.0.8, executor 0): java.nio.file.FileSystemException: /tmp/spark-6dc43e6d-a617-4aae-b74d-ad514356114e/executor-326217b8-bb86-4ed9-a228-58c435409861/spark-14b27500-14e2-469a-b2e9-e2519b56bf3b/11765276201571857691522_cache -> ./bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar: No space left on device
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:91)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixCopyFile.copyFile(UnixCopyFile.java:253)
+	at sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:581)
+	at sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:253)
+	at java.nio.file.Files.copy(Files.java:1274)
+	at org.apache.spark.util.Utils$.org$apache$spark$util$Utils$$copyRecursive(Utils.scala:664)
+	at org.apache.spark.util.Utils$.copyFile(Utils.scala:635)
+	at org.apache.spark.util.Utils$.fetchFile(Utils.scala:502)
+	at org.apache.spark.executor.Executor$$anonfun$org$apache$spark$executor$Executor$$updateDependencies$5.apply(Executor.scala:805)
+	at org.apache.spark.executor.Executor$$anonfun$org$apache$spark$executor$Executor$$updateDependencies$5.apply(Executor.scala:797)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$updateDependencies(Executor.scala:797)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:369)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1887)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1875)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1874)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1874)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2108)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2057)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2046)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:737)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2126)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1168)
+	at com.intel.analytics.bigdl.dataset.DistributedDataSet$$anon$5.cache(DataSet.scala:191)
+	at com.intel.analytics.bigdl.optim.AbstractOptimizer.prepareInput(AbstractOptimizer.scala:281)
+	at com.intel.analytics.bigdl.optim.DistriOptimizer.prepareInput(DistriOptimizer.scala:792)
+	at com.intel.analytics.bigdl.optim.DistriOptimizer.optimize(DistriOptimizer.scala:852)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.nio.file.FileSystemException: /tmp/spark-6dc43e6d-a617-4aae-b74d-ad514356114e/executor-326217b8-bb86-4ed9-a228-58c435409861/spark-14b27500-14e2-469a-b2e9-e2519b56bf3b/11765276201571857691522_cache -> ./bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar: No space left on device
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:91)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixCopyFile.copyFile(UnixCopyFile.java:253)
+	at sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:581)
+	at sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:253)
+	at java.nio.file.Files.copy(Files.java:1274)
+	at org.apache.spark.util.Utils$.org$apache$spark$util$Utils$$copyRecursive(Utils.scala:664)
+	at org.apache.spark.util.Utils$.copyFile(Utils.scala:635)
+	at org.apache.spark.util.Utils$.fetchFile(Utils.scala:502)
+	at org.apache.spark.executor.Executor$$anonfun$org$apache$spark$executor$Executor$$updateDependencies$5.apply(Executor.scala:805)
+	at org.apache.spark.executor.Executor$$anonfun$org$apache$spark$executor$Executor$$updateDependencies$5.apply(Executor.scala:797)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.executor.Executor.org$apache$spark$executor$Executor$$updateDependencies(Executor.scala:797)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:369)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+
+2019-10-23 19:08:34 ERROR TransportRequestHandler:293 - Error sending result StreamResponse{streamId=/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, byteCount=146830010, body=FileSegmentManagedBuffer{file=/opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, offset=0, length=146830010}} to /172.19.0.3:48504; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)

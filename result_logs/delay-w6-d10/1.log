@@ -1,0 +1,152 @@
+SUBMITTED
+/opt/src/lenet5.py --action train --dataPath /opt/data --batchSize 120 --endTriggerType epoch --endTriggerNum 20
+2019-10-23 19:10:28 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-10-23 19:10:29 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-10-23 19:10:29 INFO  SparkContext:54 - Submitted application: lenet5
+2019-10-23 19:10:29 INFO  SecurityManager:54 - Changing view acls to: root
+2019-10-23 19:10:29 INFO  SecurityManager:54 - Changing modify acls to: root
+2019-10-23 19:10:29 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-10-23 19:10:29 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-10-23 19:10:29 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2019-10-23 19:10:29 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 43505.
+2019-10-23 19:10:29 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-10-23 19:10:29 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-10-23 19:10:29 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-10-23 19:10:29 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-10-23 19:10:29 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-1cafca5d-a23e-4a69-a852-265b0b1ee00c
+2019-10-23 19:10:29 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-10-23 19:10:29 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-10-23 19:10:30 INFO  log:192 - Logging initialized @1974ms
+2019-10-23 19:10:30 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-10-23 19:10:30 INFO  Server:419 - Started @2047ms
+2019-10-23 19:10:30 INFO  AbstractConnector:278 - Started ServerConnector@15af9790{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-10-23 19:10:30 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5a54d742{/jobs,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5680f372{/jobs/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@478f0ba5{/jobs/job,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@45415164{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@148b31dd{/stages,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2be6c2ca{/stages/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1bb1dda0{/stages/stage,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@491d236{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@115853d9{/stages/pool,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@66b5a64c{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1a2f77e0{/storage,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@10a506f1{/storage/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@433059a7{/storage/rdd,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@8fc104b{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@698df6c3{/environment,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5127f78d{/environment/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@101b716f{/executors,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@788d456f{/executors/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7e308f53{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@10458487{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5b1e0fe9{/static,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1600fa80{/,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1500afd3{/api,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@204871b4{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@536d82a2{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-10-23 19:10:30 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://0e0833534b0b:4040
+2019-10-23 19:10:30 INFO  SparkContext:54 - Added JAR file:///opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar at spark://0e0833534b0b:43505/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar with timestamp 1571857830195
+2019-10-23 19:10:30 INFO  SparkContext:54 - Added file file:///opt/big_dl/lib/bigdl-0.9.0-python-api.zip at spark://0e0833534b0b:43505/files/bigdl-0.9.0-python-api.zip with timestamp 1571857830218
+2019-10-23 19:10:30 INFO  Utils:54 - Copying /opt/big_dl/lib/bigdl-0.9.0-python-api.zip to /tmp/spark-9eedb3ba-93be-4f58-94c5-fc4be8a39f78/userFiles-35be25b4-8d09-44ed-b141-bafcc183e8bc/bigdl-0.9.0-python-api.zip
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Connecting to master spark://spark-master:7077...
+2019-10-23 19:10:30 INFO  TransportClientFactory:267 - Successfully created connection to spark-master/172.19.0.2:7077 after 34 ms (0 ms spent in bootstraps)
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Connected to Spark cluster with app ID app-20191023191030-0038
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/0 on worker-20191023153541-172.19.0.8-32881 (172.19.0.8:32881) with 1 core(s)
+2019-10-23 19:10:30 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39151.
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/0 on hostPort 172.19.0.8:32881 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/1 on worker-20191023153540-172.19.0.3-43023 (172.19.0.3:43023) with 1 core(s)
+2019-10-23 19:10:30 INFO  NettyBlockTransferService:54 - Server created on 0e0833534b0b:39151
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/1 on hostPort 172.19.0.3:43023 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/2 on worker-20191023153540-172.19.0.5-42611 (172.19.0.5:42611) with 1 core(s)
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/2 on hostPort 172.19.0.5:42611 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/3 on worker-20191023153540-172.19.0.7-41783 (172.19.0.7:41783) with 1 core(s)
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/3 on hostPort 172.19.0.7:41783 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/4 on worker-20191023153540-172.19.0.4-38673 (172.19.0.4:38673) with 1 core(s)
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/4 on hostPort 172.19.0.4:38673 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor added: app-20191023191030-0038/5 on worker-20191023153540-172.19.0.6-36871 (172.19.0.6:36871) with 1 core(s)
+2019-10-23 19:10:30 INFO  StandaloneSchedulerBackend:54 - Granted executor ID app-20191023191030-0038/5 on hostPort 172.19.0.6:36871 with 1 core(s), 1024.0 MB RAM
+2019-10-23 19:10:30 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/0 is now RUNNING
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/3 is now RUNNING
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/2 is now RUNNING
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/1 is now RUNNING
+2019-10-23 19:10:30 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/5 is now RUNNING
+2019-10-23 19:10:30 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, 0e0833534b0b, 39151, None)
+2019-10-23 19:10:30 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 0e0833534b0b:39151 with 366.3 MB RAM, BlockManagerId(driver, 0e0833534b0b, 39151, None)
+2019-10-23 19:10:30 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, 0e0833534b0b, 39151, None)
+2019-10-23 19:10:30 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, 0e0833534b0b, 39151, None)
+2019-10-23 19:10:30 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3f972840{/metrics/json,null,AVAILABLE,@Spark}
+2019-10-23 19:10:31 INFO  StandaloneAppClient$ClientEndpoint:54 - Executor updated: app-20191023191030-0038/4 is now RUNNING
+2019-10-23 19:10:33 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.8:60030) with ID 0
+2019-10-23 19:10:34 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.7:45732) with ID 3
+2019-10-23 19:10:34 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.8:33917 with 366.3 MB RAM, BlockManagerId(0, 172.19.0.8, 33917, None)
+2019-10-23 19:10:34 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.3:60016) with ID 1
+2019-10-23 19:10:34 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.5:37046) with ID 2
+2019-10-23 19:10:34 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.6:55072) with ID 5
+2019-10-23 19:10:34 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.7:34181 with 366.3 MB RAM, BlockManagerId(3, 172.19.0.7, 34181, None)
+2019-10-23 19:10:34 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.3:39895 with 366.3 MB RAM, BlockManagerId(1, 172.19.0.3, 39895, None)
+2019-10-23 19:10:34 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.6:37261 with 366.3 MB RAM, BlockManagerId(5, 172.19.0.6, 37261, None)
+2019-10-23 19:10:34 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 172.19.0.5:33479 with 366.3 MB RAM, BlockManagerId(2, 172.19.0.5, 33479, None)
+2019-10-23 19:10:38 INFO  CoarseGrainedSchedulerBackend$DriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.4:48118) with ID 4
+2019-10-23 19:10:38 INFO  StandaloneSchedulerBackend:54 - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 1.0
+2019-10-23 19:10:38 INFO  Engine$:112 - Auto detect executor number and executor cores number
+2019-10-23 19:10:38 INFO  Engine$:114 - Executor number is 6 and executor cores number is 1
+2019-10-23 19:10:39 INFO  ThreadPool$:95 - Set mkl threads to 1 on thread 19
+2019-10-23 19:10:39 INFO  Engine$:404 - Find existing spark context. Checking the spark conf...
+cls.getname: com.intel.analytics.bigdl.python.api.Sample
+BigDLBasePickler registering: bigdl.util.common  Sample
+cls.getname: com.intel.analytics.bigdl.python.api.EvaluatedResult
+BigDLBasePickler registering: bigdl.util.common  EvaluatedResult
+cls.getname: com.intel.analytics.bigdl.python.api.JTensor
+BigDLBasePickler registering: bigdl.util.common  JTensor
+cls.getname: com.intel.analytics.bigdl.python.api.JActivity
+BigDLBasePickler registering: bigdl.util.common  JActivity
+('Extracting', '/opt/data/train-images-idx3-ubyte.gz')
+('Extracting', '/opt/data/train-labels-idx1-ubyte.gz')
+('Extracting', '/opt/data/t10k-images-idx3-ubyte.gz')
+('Extracting', '/opt/data/t10k-labels-idx1-ubyte.gz')
+creating: createSequential
+creating: createReshape
+creating: createSpatialConvolution
+creating: createTanh
+creating: createSpatialMaxPooling
+creating: createSpatialConvolution
+creating: createTanh
+creating: createSpatialMaxPooling
+creating: createReshape
+creating: createLinear
+creating: createTanh
+creating: createLinear
+creating: createLogSoftMax
+creating: createClassNLLCriterion
+creating: createDefault
+creating: createSGD
+creating: createMaxEpoch
+creating: createDistriOptimizer
+disableCheckSingleton is deprecated. Please use bigdl.check.singleton instead
+creating: createEveryEpoch
+creating: createTop1Accuracy
+creating: createEveryEpoch
+2019-10-23 19:10:40 INFO  DistriOptimizer$:791 - caching training rdd ...
+2019-10-23 19:10:41 ERROR TransportRequestHandler:293 - Error sending result StreamResponse{streamId=/jars/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, byteCount=146830010, body=FileSegmentManagedBuffer{file=/opt/big_dl/lib/bigdl-SPARK_2.4-0.9.0-jar-with-dependencies.jar, offset=0, length=146830010}} to /172.19.0.6:55088; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:145)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:355)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:224)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:382)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:934)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:368)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:639)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
