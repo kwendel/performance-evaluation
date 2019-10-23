@@ -44,15 +44,15 @@ fi
 for i in $(eval echo "{1..${REPEATS}}"); do
     fname=${LOG_DIR}${i}".log"
 
-#    docker.exe run --rm --network spark-cluster-network \
-#           --name spark-submit \
-#           -e SPARK_MASTER=${SPARK_MASTER} \
-#           -e TOTAL_CORES=${TOTAL_CORES} \
-#           -e EXECUTOR_CORES=${EXECUTOR_CORES} \
-#           -e EXECUTOR_MEMORY=${EXECUTOR_MEMORY} \
-#           -p 4040:4040 \
-#           spark-cluster/spark:latest \
-#           /opt/submit.sh ${PYTHON_MAIN} ${PYTHON_ARGS} > ${fname}
+    docker run --rm --network spark-cluster-network \
+           --name spark-submit \
+           -e SPARK_MASTER=${SPARK_MASTER} \
+           -e TOTAL_CORES=${TOTAL_CORES} \
+           -e EXECUTOR_CORES=${EXECUTOR_CORES} \
+           -e EXECUTOR_MEMORY=${EXECUTOR_MEMORY} \
+           -p 4040:4040 \
+           spark-cluster/spark:latest \
+           /opt/submit.sh ${PYTHON_MAIN} ${PYTHON_ARGS} > ${fname}
 
     echo "Finished [${i}/${REPEATS}]"
 done
