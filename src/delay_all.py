@@ -28,7 +28,6 @@ if __name__ == '__main__':
         time_per_epoch.extend(avg)
         final_acc.extend(acc)
 
-    for worker in xs[1]:
         for delay in ys[1][1:]:
             directory = f"{log_dir}{log_prefix}-{worker}-{delay}"
             df = parse_dir(directory)
