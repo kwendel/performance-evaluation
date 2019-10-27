@@ -3,11 +3,13 @@ from parse import parse_dir, avg_time_per_epoch, final_accuracy
 
 if __name__ == '__main__':
 
+    baseline_log_dir = '../results/delay_baseline_logs/'
+    baseline_log_prefix = 'baseline'
     log_dir = '../results/delay_logs/'
     log_prefix = 'delay'
 
     xs = ('Workers', ['w1', 'w4', 'w6'])
-    ys = ('Delays', ['d10', 'd35', 'd140', 'd500'])
+    ys = ('Delays', ['d0', 'd10', 'd35', 'd140', 'd500'])
     replications = 5
 
     # Per w - delay
@@ -15,7 +17,19 @@ if __name__ == '__main__':
     final_acc = list()
 
     for worker in xs[1]:
-        for delay in ys[1]:
+        directory = f"{baseline_log_dir}{baseline_log_prefix}-{worker}-d0"
+        print(directory)
+        df = parse_dir(directory)
+
+        # Compute average time per epoch
+        # Compute end accuracy
+        avg = avg_time_per_epoch(df)
+        acc = final_accuracy(df)
+        time_per_epoch.extend(avg)
+        final_acc.extend(acc)
+
+    for worker in xs[1]:
+        for delay in ys[1][1:]:
             directory = f"{log_dir}{log_prefix}-{worker}-{delay}"
             df = parse_dir(directory)
 
@@ -25,6 +39,7 @@ if __name__ == '__main__':
             acc = final_accuracy(df)
             time_per_epoch.extend(avg)
             final_acc.extend(acc)
+
 
     times = ('Mean_Time', time_per_epoch)
     accs = ('Final_Accuracy', final_acc)

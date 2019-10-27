@@ -9,8 +9,8 @@ if __name__ == '__main__':
     log_prefix = 'delay-single'
 
     # TODO fill in available logs
-    # xs = ('Workers', ['w1', 'w4', 'w6'])
-    # ys = ('Delays', ['d10', 'd35', 'd140', 'd500'])
+    xs = ('Workers', ['w1'])
+    ys = ('Delays', ['d10', 'd35', 'd140', 'd500'])
     replications = 5
 
     # Per w - delay
