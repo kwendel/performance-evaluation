@@ -10,7 +10,7 @@ for ((j=0;j<${#delays[@]};++j)); do
         sleep 5
 
         # Start experiment
-        name="delay-w${workers[i]}-d${delays[j]}"
+        name="delay-single-w${workers[i]}-d${delays[j]}"
         echo ${name}
         ./scripts/submit-experiment.sh ${name} ${workers[i]}
 
