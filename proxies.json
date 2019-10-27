@@ -1,0 +1,8 @@
+[
+    {
+        "name": "spark-master",
+        "enabled": true,
+        "listen": "[::]:7078",
+        "upstream": "spark-master:7077"
+    }
+]

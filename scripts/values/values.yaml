@@ -1,0 +1,31 @@
+kiali:
+  enabled: true
+  dashboard:
+    viewOnlyMode: true
+    auth:
+      strategy: anonymous
+tracing:
+  enabled: true
+
+pilot:
+  autoscaleEnabled: false
+  traceSampling: 100.0
+  resources:
+    requests:
+      cpu: 50m
+      memory: 200Mi
+mixer:
+  policy:
+    enabled: true
+    autoscaleEnabled: false
+    resources:
+      requests:
+        cpu: 50m
+        memory: 200Mi
+  telemetry:
+    enabled: true
+    autoscaleEnabled: false
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi

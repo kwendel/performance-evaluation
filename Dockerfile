@@ -55,3 +55,9 @@ COPY start-master.sh start-master.sh
 COPY start-worker.sh start-worker.sh
 COPY submit.sh submit.sh
 RUN chmod +x *.sh
+
+COPY data /opt/data
+COPY src /opt/src
+
+# Install pumba dependencies
+RUN apt-get install -y iproute2

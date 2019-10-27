@@ -1,0 +1,90 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.Master.Fullname }}
+  labels:
+    app: {{ .Values.Master.Fullname }}
+    version: v1
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+spec:
+  ports:
+    - port: {{ .Values.Master.ServicePort }}
+      protocol: TCP
+      name: tcp-master
+      targetPort: {{ .Values.Master.ContainerPort }}
+  selector:
+    component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.WebUi.Fullname }}-{{ .Values.Master.Fullname }}"
+  labels:
+    app: {{ .Values.WebUi.Fullname }}
+    version: v1
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+spec:
+  ports:
+    - port: {{ .Values.WebUi.ServicePort }}
+      targetPort: {{ .Values.WebUi.ContainerPort }}
+  selector:
+    component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+  type: {{ .Values.WebUi.ServiceType }}
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.Master.Fullname }}
+  labels:
+    app: {{ .Values.Master.Fullname }}
+    version: v1
+    heritage: {{ .Release.Service | quote }}
+    release: {{ .Release.Name | quote }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+spec:
+  replicas: {{ default 1 .Values.Master.Replicas }}
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.Master.Fullname }}
+        version: v1
+        heritage: {{ .Release.Service | quote }}
+        release: {{ .Release.Name | quote }}
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+        component: "{{ .Release.Name }}-{{ .Values.Master.Component }}"
+    spec:
+      containers:
+        - name: {{   .Values.Master.Fullname   }}
+          image: "{{ .Values.Master.Image }}:{{ .Values.Master.ImageTag }}"
+          command: ["/bin/sh","-c"]
+          args: ["echo $(hostname -i) {{ .Values.Master.Fullname }} >> /etc/hosts; {{ .Values.Spark.Path }}/bin/spark-class org.apache.spark.deploy.master.Master"]
+          ports:
+            - name: tcp-master
+              containerPort: {{ .Values.Master.ContainerPort }}
+              protocol: TCP
+            - containerPort: {{ .Values.WebUi.ContainerPort }}
+          resources:
+            requests:
+              cpu: "{{ .Values.Master.Cpu }}"
+              memory: "{{ .Values.Master.Memory }}"
+          env:
+          - name: SPARK_DAEMON_MEMORY
+            value: {{ default "1g" .Values.Master.DaemonMemory | quote }}
+          - name: SPARK_MASTER_HOST
+            value: {{ .Values.Master.Fullname }}
+          - name: SPARK_MASTER_PORT
+            value: {{ .Values.Master.ServicePort | quote }}
+          - name: SPARK_MASTER_WEBUI_PORT
+            value: {{ .Values.WebUi.ContainerPort | quote }}
