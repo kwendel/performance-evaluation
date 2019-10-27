@@ -58,3 +58,6 @@ RUN chmod +x *.sh
 
 COPY data /opt/data
 COPY src /opt/src
+
+# Install pumba dependencies
+RUN apt-get install -y iproute2
