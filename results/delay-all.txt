@@ -1,0 +1,363 @@
+Parsing ../results/delay_logs/delay-w1-d10\1.log
+Parsing ../results/delay_logs/delay-w1-d10\2.log
+Parsing ../results/delay_logs/delay-w1-d10\3.log
+Parsing ../results/delay_logs/delay-w1-d10\4.log
+Parsing ../results/delay_logs/delay-w1-d10\5.log
+Parsing ../results/delay_logs/delay-w1-d35\1.log
+Parsing ../results/delay_logs/delay-w1-d35\2.log
+Parsing ../results/delay_logs/delay-w1-d35\3.log
+Parsing ../results/delay_logs/delay-w1-d35\4.log
+Parsing ../results/delay_logs/delay-w1-d35\5.log
+Parsing ../results/delay_logs/delay-w1-d140\1.log
+Parsing ../results/delay_logs/delay-w1-d140\2.log
+Parsing ../results/delay_logs/delay-w1-d140\3.log
+Parsing ../results/delay_logs/delay-w1-d140\4.log
+Parsing ../results/delay_logs/delay-w1-d140\5.log
+Parsing ../results/delay_logs/delay-w1-d500\1.log
+Parsing ../results/delay_logs/delay-w1-d500\2.log
+Parsing ../results/delay_logs/delay-w1-d500\3.log
+Parsing ../results/delay_logs/delay-w1-d500\4.log
+Parsing ../results/delay_logs/delay-w1-d500\5.log
+Parsing ../results/delay_logs/delay-w4-d10\1.log
+Parsing ../results/delay_logs/delay-w4-d10\2.log
+Parsing ../results/delay_logs/delay-w4-d10\3.log
+Parsing ../results/delay_logs/delay-w4-d10\4.log
+Parsing ../results/delay_logs/delay-w4-d10\5.log
+Parsing ../results/delay_logs/delay-w4-d35\1.log
+Parsing ../results/delay_logs/delay-w4-d35\2.log
+Parsing ../results/delay_logs/delay-w4-d35\3.log
+Parsing ../results/delay_logs/delay-w4-d35\4.log
+Parsing ../results/delay_logs/delay-w4-d35\5.log
+Parsing ../results/delay_logs/delay-w4-d140\1.log
+Parsing ../results/delay_logs/delay-w4-d140\2.log
+Parsing ../results/delay_logs/delay-w4-d140\3.log
+Parsing ../results/delay_logs/delay-w4-d140\4.log
+Parsing ../results/delay_logs/delay-w4-d140\5.log
+Parsing ../results/delay_logs/delay-w4-d500\1.log
+Parsing ../results/delay_logs/delay-w4-d500\2.log
+Parsing ../results/delay_logs/delay-w4-d500\3.log
+Parsing ../results/delay_logs/delay-w4-d500\4.log
+Parsing ../results/delay_logs/delay-w4-d500\5.log
+Parsing ../results/delay_logs/delay-w6-d10\1.log
+Parsing ../results/delay_logs/delay-w6-d10\2.log
+Parsing ../results/delay_logs/delay-w6-d10\3.log
+Parsing ../results/delay_logs/delay-w6-d10\4.log
+Parsing ../results/delay_logs/delay-w6-d10\5.log
+Parsing ../results/delay_logs/delay-w6-d35\1.log
+Parsing ../results/delay_logs/delay-w6-d35\2.log
+Parsing ../results/delay_logs/delay-w6-d35\3.log
+Parsing ../results/delay_logs/delay-w6-d35\4.log
+Parsing ../results/delay_logs/delay-w6-d35\5.log
+Parsing ../results/delay_logs/delay-w6-d140\1.log
+Parsing ../results/delay_logs/delay-w6-d140\2.log
+Parsing ../results/delay_logs/delay-w6-d140\3.log
+Parsing ../results/delay_logs/delay-w6-d140\4.log
+Parsing ../results/delay_logs/delay-w6-d140\5.log
+Parsing ../results/delay_logs/delay-w6-d500\1.log
+Parsing ../results/delay_logs/delay-w6-d500\2.log
+Parsing ../results/delay_logs/delay-w6-d500\3.log
+Parsing ../results/delay_logs/delay-w6-d500\4.log
+Parsing ../results/delay_logs/delay-w6-d500\5.log
+==============================
+Original data
+        Mean_Time Workers Delays
+0    22340.474844      w1    d10
+1    22375.042736      w1    d10
+2    22543.761072      w1    d10
+3    22500.528821      w1    d10
+4    22264.544323      w1    d10
+5    22518.537826      w1    d35
+6    22543.783095      w1    d35
+7    22536.963245      w1    d35
+8    22598.764625      w1    d35
+9    22567.793978      w1    d35
+10   22669.697630      w1   d140
+11   22893.403172      w1   d140
+12   22521.743788      w1   d140
+13   22342.733454      w1   d140
+14   22329.266606      w1   d140
+15   22270.412028      w1   d500
+16   22041.203267      w1   d500
+17   22271.695600      w1   d500
+18   22112.143638      w1   d500
+19   22122.731808      w1   d500
+20  182730.276878      w4    d10
+21  183621.555221      w4    d10
+22  182891.661316      w4    d10
+23  182705.653506      w4    d10
+24  171328.449253      w4    d10
+25  446262.480829      w4    d35
+26  446643.528487      w4    d35
+27   26756.466785      w4    d35
+28   25333.352497      w4    d35
+29   25096.377363      w4    d35
+30  953762.936213      w4   d140
+31   25189.674555      w4   d140
+32   25030.341223      w4   d140
+33   24969.594516      w4   d140
+34   25285.523978      w4   d140
+35  960671.193048      w4   d500
+36   25548.361302      w4   d500
+37   25643.462176      w4   d500
+38   25520.292422      w4   d500
+39   25611.806364      w4   d500
+40  245320.282112      w6    d10
+41  245012.642133      w6    d10
+42  244952.599156      w6    d10
+43  175307.801226      w6    d10
+44   31376.692999      w6    d10
+45  633050.912692      w6    d35
+46  293034.148320      w6    d35
+47   31408.512787      w6    d35
+48   31478.900225      w6    d35
+49   31554.994092      w6    d35
+50  961051.492173      w6   d140
+51   31708.408885      w6   d140
+52   31584.237440      w6   d140
+53   31763.577162      w6   d140
+54   31264.747831      w6   d140
+55  967306.700762      w6   d500
+56   31827.592730      w6   d500
+57   31850.750557      w6   d500
+58   31993.786090      w6   d500
+59   32090.705199      w6   d500
+==============================
+LN Transformed data
+    Mean_Time Workers Delays
+0   10.014155      w1    d10
+1   10.015701      w1    d10
+2   10.023214      w1    d10
+3   10.021294      w1    d10
+4   10.010751      w1    d10
+5   10.022094      w1    d35
+6   10.023215      w1    d35
+7   10.022912      w1    d35
+8   10.025651      w1    d35
+9   10.024279      w1    d35
+10  10.028784      w1   d140
+11  10.038604      w1   d140
+12  10.022237      w1   d140
+13  10.014256      w1   d140
+14  10.013654      w1   d140
+15  10.011014      w1   d500
+16  10.000669      w1   d500
+17  10.011072      w1   d500
+18  10.003882      w1   d500
+19  10.004361      w1   d500
+20  12.115766      w4    d10
+21  12.120632      w4    d10
+22  12.116649      w4    d10
+23  12.115632      w4    d10
+24  12.051338      w4    d10
+25  13.008663      w4    d35
+26  13.009516      w4    d35
+27  10.194531      w4    d35
+28  10.139877      w4    d35
+29  10.130479      w4    d35
+30  13.768170      w4   d140
+31  10.134189      w4   d140
+32  10.127844      w4   d140
+33  10.125414      w4   d140
+34  10.137987      w4   d140
+35  13.775387      w4   d500
+36  10.148328      w4   d500
+37  10.152044      w4   d500
+38  10.147229      w4   d500
+39  10.150809      w4   d500
+40  12.410320      w6    d10
+41  12.409065      w6    d10
+42  12.408820      w6    d10
+43  12.074299      w6    d10
+44  10.353821      w6    d10
+45  13.358306      w6    d35
+46  12.588044      w6    d35
+47  10.354834      w6    d35
+48  10.357073      w6    d35
+49  10.359487      w6    d35
+50  13.775783      w6   d140
+51  10.364337      w6   d140
+52  10.360413      w6   d140
+53  10.366076      w6   d140
+54  10.350246      w6   d140
+55  13.782271      w6   d500
+56  10.368089      w6   d500
+57  10.368816      w6   d500
+58  10.373297      w6   d500
+59  10.376322      w6   d500
+                N       Mean        SD        SE  95% Conf.   Interval
+Workers Delays                                                        
+w1      d10     5  10.017023  0.005145  0.002301  10.012513  10.021533
+        d140    5  10.023507  0.010489  0.004691  10.014313  10.032701
+        d35     5  10.023630  0.001374  0.000614  10.022426  10.024834
+        d500    5  10.006200  0.004644  0.002077  10.002129  10.010270
+w4      d10     5  12.104003  0.029511  0.013198  12.078136  12.129871
+        d140    5  10.858721  1.626439  0.727366   9.433084  12.284358
+        d35     5  11.296613  1.563461  0.699201   9.926179  12.667047
+        d500    5  10.874760  1.621501  0.725157   9.453451  12.296068
+w6      d10     5  11.931265  0.893677  0.399665  11.147922  12.714607
+        d140    5  11.043371  1.527477  0.683109   9.704478  12.382264
+        d35     5  11.403549  1.458517  0.652269  10.125103  12.681995
+        d500    5  11.053759  1.525288  0.682130   9.716785  12.390733
+==============================
+Overall model F(11,48) = 2.168, p = 0.0326
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              Mean_Time   R-squared:                       0.332
+Model:                            OLS   Adj. R-squared:                  0.179
+Method:                 Least Squares   F-statistic:                     2.168
+Date:                Sun, 27 Oct 2019   Prob (F-statistic):             0.0326
+Time:                        16:55:08   Log-Likelihood:                -85.741
+No. Observations:                  60   AIC:                             195.5
+Df Residuals:                      48   BIC:                             220.6
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+======================================================================================================
+                                         coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                             10.0170      0.505     19.833      0.000       9.002      11.033
+C(Workers)[T.w4]                       2.0870      0.714      2.922      0.005       0.651       3.523
+C(Workers)[T.w6]                       1.9142      0.714      2.680      0.010       0.478       3.350
+C(Delays)[T.d140]                      0.0065      0.714      0.009      0.993      -1.430       1.443
+C(Delays)[T.d35]                       0.0066      0.714      0.009      0.993      -1.430       1.443
+C(Delays)[T.d500]                     -0.0108      0.714     -0.015      0.988      -1.447       1.425
+C(Workers)[T.w4]:C(Delays)[T.d140]    -1.2518      1.010     -1.239      0.221      -3.283       0.779
+C(Workers)[T.w6]:C(Delays)[T.d140]    -0.8944      1.010     -0.885      0.380      -2.925       1.137
+C(Workers)[T.w4]:C(Delays)[T.d35]     -0.8140      1.010     -0.806      0.424      -2.845       1.217
+C(Workers)[T.w6]:C(Delays)[T.d35]     -0.5343      1.010     -0.529      0.599      -2.565       1.497
+C(Workers)[T.w4]:C(Delays)[T.d500]    -1.2184      1.010     -1.206      0.234      -3.249       0.813
+C(Workers)[T.w6]:C(Delays)[T.d500]    -0.8667      1.010     -0.858      0.395      -2.898       1.164
+==============================================================================
+Omnibus:                       22.555   Durbin-Watson:                   2.270
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               31.109
+Skew:                           1.485   Prob(JB):                     1.76e-07
+Kurtosis:                       4.905   Cond. No.                         17.9
+==============================================================================
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+==============================
+ANOVA
+                         sum_sq    df         F    PR(>F)
+C(Workers)            22.698640   2.0  8.898151  0.000516
+C(Delays)              5.013199   3.0  1.310158  0.281963
+C(Workers):C(Delays)   2.703633   6.0  0.353286  0.904489
+Residual              61.222534  48.0       NaN       NaN
+==============================
+Original data
+    Final_Accuracy Workers Delays
+0           0.9585      w1    d10
+1           0.9585      w1    d10
+2           0.9585      w1    d10
+3           0.9585      w1    d10
+4           0.9585      w1    d10
+5           0.9634      w1    d35
+6           0.9634      w1    d35
+7           0.9634      w1    d35
+8           0.9634      w1    d35
+9           0.9634      w1    d35
+10          0.9621      w1   d140
+11          0.9621      w1   d140
+12          0.9621      w1   d140
+13          0.9621      w1   d140
+14          0.9621      w1   d140
+15          0.9616      w1   d500
+16          0.9616      w1   d500
+17          0.9616      w1   d500
+18          0.9616      w1   d500
+19          0.9616      w1   d500
+20          0.9591      w4    d10
+21          0.9591      w4    d10
+22          0.9591      w4    d10
+23          0.9591      w4    d10
+24          0.9591      w4    d10
+25          0.9614      w4    d35
+26          0.9614      w4    d35
+27          0.9614      w4    d35
+28          0.9614      w4    d35
+29          0.9614      w4    d35
+30          0.9601      w4   d140
+31          0.9601      w4   d140
+32          0.9601      w4   d140
+33          0.9601      w4   d140
+34          0.9601      w4   d140
+35          0.9585      w4   d500
+36          0.9585      w4   d500
+37          0.9585      w4   d500
+38          0.9585      w4   d500
+39          0.9585      w4   d500
+40          0.9663      w6    d10
+41          0.9663      w6    d10
+42          0.9663      w6    d10
+43          0.9663      w6    d10
+44          0.9663      w6    d10
+45          0.9589      w6    d35
+46          0.9589      w6    d35
+47          0.9589      w6    d35
+48          0.9589      w6    d35
+49          0.9589      w6    d35
+50          0.9595      w6   d140
+51          0.9595      w6   d140
+52          0.9595      w6   d140
+53          0.9595      w6   d140
+54          0.9595      w6   d140
+55          0.9635      w6   d500
+56          0.9635      w6   d500
+57          0.9635      w6   d500
+58          0.9635      w6   d500
+59          0.9635      w6   d500
+                N    Mean   SD            SE  95% Conf.  Interval
+Workers Delays                                                   
+w1      d10     5  0.9585  0.0  5.551115e-17     0.9585    0.9585
+        d140    5  0.9621  0.0  5.551115e-17     0.9621    0.9621
+        d35     5  0.9634  0.0  0.000000e+00     0.9634    0.9634
+        d500    5  0.9616  0.0  0.000000e+00     0.9616    0.9616
+w4      d10     5  0.9591  0.0  0.000000e+00     0.9591    0.9591
+        d140    5  0.9601  0.0  0.000000e+00     0.9601    0.9601
+        d35     5  0.9614  0.0  0.000000e+00     0.9614    0.9614
+        d500    5  0.9585  0.0  5.551115e-17     0.9585    0.9585
+w6      d10     5  0.9663  0.0  0.000000e+00     0.9663    0.9663
+        d140    5  0.9595  0.0  0.000000e+00     0.9595    0.9595
+        d35     5  0.9589  0.0  5.551115e-17     0.9589    0.9589
+        d500    5  0.9635  0.0  0.000000e+00     0.9635    0.9635
+==============================
+Overall model F(11,48) = 5294705322813877833957376.000, p = 0.0000
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         Final_Accuracy   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                  1.000
+Method:                 Least Squares   F-statistic:                 5.295e+24
+Date:                Sun, 27 Oct 2019   Prob (F-statistic):               0.00
+Time:                        16:55:08   Log-Likelihood:                 1942.2
+No. Observations:                  60   AIC:                            -3860.
+Df Residuals:                      48   BIC:                            -3835.
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+======================================================================================================
+                                         coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                              0.9585   1.06e-15   9.05e+14      0.000       0.958       0.959
+C(Workers)[T.w4]                       0.0006    1.5e-15   4.01e+11      0.000       0.001       0.001
+C(Workers)[T.w6]                       0.0078    1.5e-15   5.21e+12      0.000       0.008       0.008
+C(Delays)[T.d140]                      0.0036    1.5e-15    2.4e+12      0.000       0.004       0.004
+C(Delays)[T.d35]                       0.0049    1.5e-15   3.27e+12      0.000       0.005       0.005
+C(Delays)[T.d500]                      0.0031    1.5e-15   2.07e+12      0.000       0.003       0.003
+C(Workers)[T.w4]:C(Delays)[T.d140]    -0.0026   2.12e-15  -1.23e+12      0.000      -0.003      -0.003
+C(Workers)[T.w6]:C(Delays)[T.d140]    -0.0104   2.12e-15  -4.91e+12      0.000      -0.010      -0.010
+C(Workers)[T.w4]:C(Delays)[T.d35]     -0.0026   2.12e-15  -1.23e+12      0.000      -0.003      -0.003
+C(Workers)[T.w6]:C(Delays)[T.d35]     -0.0123   2.12e-15  -5.81e+12      0.000      -0.012      -0.012
+C(Workers)[T.w4]:C(Delays)[T.d500]    -0.0037   2.12e-15  -1.75e+12      0.000      -0.004      -0.004
+C(Workers)[T.w6]:C(Delays)[T.d500]    -0.0059   2.12e-15  -2.79e+12      0.000      -0.006      -0.006
+==============================================================================
+Omnibus:                       10.895   Durbin-Watson:                   0.007
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):                3.513
+Skew:                           0.222   Prob(JB):                        0.173
+Kurtosis:                       1.901   Cond. No.                         17.9
+==============================================================================
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+==============================
+ANOVA
+                            sum_sq    df             F  PR(>F)
+C(Workers)            5.492500e-05   2.0  4.895632e+24     0.0
+C(Delays)             5.245833e-06   3.0  3.117181e+23     0.0
+C(Workers):C(Delays)  2.665417e-04   6.0  7.919223e+24     0.0
+Residual              2.692604e-28  48.0           NaN     NaN

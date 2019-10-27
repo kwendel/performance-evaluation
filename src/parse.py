@@ -50,9 +50,43 @@ def parse_file(fname, idx):
     return df
 
 
+def parse_dir(dirname):
+    frames = list()
+    for i, f in enumerate(glob(f"{dirname}/*.log")):
+        frames.append(parse_file(f, i))
+
+    result = pd.concat(frames)
+    return result
+
+
+def avg_time_per_epoch(df, col_idx=2, epochs=20, runs=5):
+    times = list()
+    start_row = 0
+    end_row = start_row + (epochs - 1)
+
+    for i in range(0, runs):
+        times.append(df.iloc[start_row:end_row, col_idx].mean())
+        start_row += epochs
+        end_row += epochs
+
+    return times
+
+
+def final_accuracy(df, col_idx=1, epochs=20, runs=5):
+    accs = list()
+    final_epoch = epochs - 1
+
+    for i in range(0, runs):
+        accs.append(df.iloc[final_epoch, col_idx])
+
+    return accs
+
+
 if __name__ == '__main__':
-    log_dir = "../logs/"
-    experiment = "test/"
+
+    # Example to parse a directory
+    log_dir = "../results/delay_logs/"
+    experiment = "delay-w1-d10/"
 
     frames = list()
     for i, f in enumerate(glob(f"{log_dir}{experiment}*.log")):
