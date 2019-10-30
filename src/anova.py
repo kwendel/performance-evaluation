@@ -7,45 +7,58 @@ import statsmodels.api as sm
 from statsmodels.formula.api import ols
 
 
-def two_way_anova(xs: tuple, ys: tuple, values: tuple, replications, log_transform=True):
-    xname, xlevels = xs
-    yname, ylevels = ys
-    dname, data = values
+def two_way_anova(xs: tuple, ys: tuple, values: tuple, replications, stds: tuple = None, log_transform=True):
+    with pd.option_context('display.max_rows', 100):
+        xname, xlevels = xs
+        yname, ylevels = ys
+        dname, data = values
 
-    y = np.repeat(ylevels, replications)
-    for i in range(1, len(xlevels)):
-        thing = np.repeat(ylevels, replications)
-        y = np.concatenate((y, thing))
+        y = np.repeat(ylevels, replications)
+        for i in range(1, len(xlevels)):
+            thing = np.repeat(ylevels, replications)
+            y = np.concatenate((y, thing))
 
-    x = np.repeat(xlevels, len(ylevels) * replications)
+        x = np.repeat(xlevels, len(ylevels) * replications)
 
-    df = pd.DataFrame({dname: data,
-                       xname: x,
-                       yname: y})
+        df = pd.DataFrame({dname: data,
+                           xname: x,
+                           yname: y})
 
-    df[dname] = df[dname].astype(np.float)
-    print("=" * 30)
-    print("Original data")
-    print(df)
+        if stds:
+            df[stds[0]] = stds[1]
+            # Rearrange
+            df = df[[dname, stds[0], xname, yname]]
 
-    if log_transform:
+        df[dname] = df[dname].astype(np.float)
         print("=" * 30)
-        print("LN Transformed data")
-        df[dname] = np.log(df[dname])
+        print("Original data")
         print(df)
 
-    print(rp.summary_cont(df.groupby([xname, yname]))[dname])
+        if log_transform:
+            print("=" * 30)
+            print("LN Transformed data")
+            df[dname] = np.log(df[dname])
+            df[stds[0]] = stds[1]
+            print(df)
 
-    model = ols(f"{dname}~ C({xname})*C({yname})", df).fit()
-    # Seeing if the overall model is significant
-    print("=" * 30)
-    print(f"Overall model F({model.df_model:.0f},{model.df_resid:.0f}) = {model.fvalue:.3f}, p = {model.f_pvalue:.4f}")
-    print(model.summary())
+        # Remove stds again
+        if stds:
+            del df[stds[0]]
 
-    print("=" * 30)
-    print("ANOVA")
-    res = sm.stats.anova_lm(model, typ=2)
-    print(res)
+        print(rp.summary_cont(df.groupby([xname, yname]))[dname])
+
+        model = ols(f"{dname}~ C({xname})*C({yname})", df).fit()
+        # Seeing if the overall model is significant
+        print("=" * 30)
+        print(
+            f"Overall model F({model.df_model:.0f},{model.df_resid:.0f}) = {model.fvalue:.3f}, "
+            f"p = {model.f_pvalue:.4f}")
+        print(model.summary())
+
+        print("=" * 30)
+        print("ANOVA")
+        res = sm.stats.anova_lm(model, typ=2)
+        print(res)
 
 
 if __name__ == '__main__':

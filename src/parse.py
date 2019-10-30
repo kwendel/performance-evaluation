@@ -61,15 +61,18 @@ def parse_dir(dirname):
 
 def avg_time_per_epoch(df, col_idx=2, epochs=20, runs=5):
     times = list()
+    stds = list()
     start_row = 0
     end_row = start_row + (epochs - 1)
 
     for i in range(0, runs):
-        times.append(df.iloc[start_row:end_row, col_idx].mean())
+        data = df.iloc[start_row:end_row, col_idx]
+        times.append(data.mean())
+        stds.append(data.std())
         start_row += epochs
         end_row += epochs
 
-    return times
+    return times, stds
 
 
 def final_accuracy(df, col_idx=1, epochs=20, runs=5):
