@@ -8,7 +8,7 @@ if __name__ == '__main__':
     log_dir = '../results/delay_logs/'
     log_prefix = 'delay'
 
-    xs = ('Workers', ['w1', 'w4', 'w6'])
+    xs = ('Workers', ['w1', 'w2', 'w4', 'w6'])
     ys = ('Delays', ['d0', 'd10', 'd35', 'd140', 'd500'])
     replications = 5
 

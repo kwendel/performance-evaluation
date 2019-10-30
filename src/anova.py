@@ -34,16 +34,16 @@ def two_way_anova(xs: tuple, ys: tuple, values: tuple, replications, stds: tuple
         print("Original data")
         print(df)
 
+        # Remove stds again
+        if stds:
+            del df[stds[0]]
+
         if log_transform:
             print("=" * 30)
             print("LN Transformed data")
             df[dname] = np.log(df[dname])
-            df[stds[0]] = stds[1]
             print(df)
 
-        # Remove stds again
-        if stds:
-            del df[stds[0]]
 
         print(rp.summary_cont(df.groupby([xname, yname]))[dname])
 
