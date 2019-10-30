@@ -7,8 +7,9 @@ for ((j=0;j<${#delays[@]};++j)); do
     for ((i=0;i<${#workers[@]};++i)); do
         # Start delay
         for ((w=1;w<=${workers[i]};w++)); do
-            ./pumba netem --duration 300m delay --time ${delays[j]} containers performance_evaluation_spark-worker_${w} &
+            ./pumba netem --duration 3000m delay --time ${delays[j]} containers performance_evaluation_spark-worker_${w} &
         done
+        sleep 5
 
         # Start experiment
         name="delay-w${workers[i]}-d${delays[j]}"
@@ -17,6 +18,7 @@ for ((j=0;j<${#delays[@]};++j)); do
 
         # Kill delays
         pkill -f 'pumba'
+        sleep 5
     done
 done
 
